@@ -7,6 +7,9 @@ class RequestHandler
      * @return string
      *
      * This will formate the URI needed in the routes.php file
+     *
+     * For the moment the URL must start with public like so:
+     * localhost/public/contacts
      */
     public function modifyURIforRoute()
     {

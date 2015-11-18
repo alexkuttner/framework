@@ -8,7 +8,3 @@ define('ROOT', dirname(dirname(__FILE__)));
 define('BASEURL', $_SERVER['HTTP_HOST']);
 
 require_once (ROOT . DS . 'library' . DS . 'bootstrap.php');
-
-
-
-
