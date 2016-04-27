@@ -2,8 +2,6 @@
 
 class Route
 {
-    private $requestHandler;
-
     public function __construct()
     {
 
@@ -11,14 +9,16 @@ class Route
 
     public static function request($route, $controller, $method)
     {
-        //TODO::Should do this in the contructor
         $requestHandler = new requestHandler;
+
         $uri = $requestHandler->modifyURIforRoute();
 
-        //Get the URI which is /customers/1
+        //Get the URI example /customers/1
 
-        //If there is a INT after the first string like customers/1
-        //Then we need a route that has a question mark after the first string
+        /**
+         * If there is a INT after the first string like customers/1 then
+         * we need a route that has a question mark after the first string
+         */
         if(preg_match("/.*\/[0-9].*/", $uri))
         {
             //If the route contains a ? then we are a bit closer to finding the route
@@ -62,11 +62,5 @@ class Route
              */
             exit;
         }
-        else
-        {
-            //TODO:: this will print for every route run. Create a function and throw a Exception or something
-            var_dump('No Route Found in Route.php');
-        }
-
     }
 }
