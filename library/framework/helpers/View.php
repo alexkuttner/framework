@@ -20,7 +20,7 @@ class View
      * Use to get the local path
      * Good for including php files
      */
-    public static function root($file)
+    public static function inc($file)
     {
         return ROOT . DS . $file;
     }

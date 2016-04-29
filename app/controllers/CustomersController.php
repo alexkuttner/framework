@@ -4,13 +4,20 @@ class CustomersController extends BaseController
 {
     public function index()
     {
+        //If passing datat to the views the parent would become the name of the variable accessible in the view
         $names = [
-            'names' => [
-                'alex'
+            '0' => [
+                'name' => 'alex',
+                'age' => '24'
+            ],
+            '1' => [
+                'name' => 'paola',
+                'age' => '22'
             ]
         ];
+        $string = ['test me as string'];
 
-        $this->loadView('contact/contact', [$names]);
+        $this->loadView('customers/index', ['names' => $names, 'string' => $string]);
     }
 
     public function view($id)
@@ -19,6 +26,6 @@ class CustomersController extends BaseController
             'id' => $id
         ];
 
-        $this->loadView('contact/contact', [$id]);
+        $this->loadView('contact/contact');
     }
 }

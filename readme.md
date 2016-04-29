@@ -6,4 +6,8 @@ Life cycle:
 2) /public/.htaccess
 3) public/index.php
 4) library/bootstrap.php
-5) app/routes.php this will start at the first route and work down until the route is found
+5) app/routes.php
+ a) the Route:request() is called which will get the URI example "customers/1"
+ b) When a route is matched with a URI it will then create a instance of the controller and call the method stated in the route.
+
+
