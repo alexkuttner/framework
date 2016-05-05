@@ -15,7 +15,7 @@ class CustomersController extends BaseController
                 'age' => '22'
             ]
         ];
-        $string = ['test me as string'];
+        $string = ['I am a string around your world!!'];
 
         $this->loadView('customers/index', ['names' => $names, 'string' => $string]);
     }
